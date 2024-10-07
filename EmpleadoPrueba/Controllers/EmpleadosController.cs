@@ -44,8 +44,8 @@ namespace EmpleadoPrueba.Controllers
             _context.Add(empleado);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetEmpleado", new { id = empleado.EmployeeNumber }, empleado);
-            //return CreatedAtAction(nameof(PostEmpleado), new { id = empleado.EmployeeNumber }, prueba);
+            //return CreatedAtAction("GetEmpleado", new { id = empleado.EmployeeNumber }, empleado);
+            return CreatedAtAction(nameof(PostEmpleado), new { id = empleado.EmployeeNumber }, empleado);
         }
 
         // PUT: /Empleados/1
